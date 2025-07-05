@@ -1,0 +1,133 @@
+:root {
+    --bg: #fff;
+    --text: #000;
+    --btn: #e0e0e0;
+    --btn-hover: #d0d0d0;
+    --highlight: #f76c6c;
+  }
+  
+  body.dark {
+    --bg: #1e1e1e;
+    --text: #fff;
+    --btn: #333;
+    --btn-hover: #444;
+    --highlight: #f96c6c;
+  }
+  
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .theme-toggle {
+    margin-bottom: 10px;
+  }
+  
+  .calculator {
+    background: var(--bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+  }
+  
+  #display {
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: right;
+    border: 1px solid var(--btn-hover);
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  button {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: var(--btn);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  button:hover {
+    background: var(--btn-hover);
+  }
+  
+  #clear {
+    background-color: var(--highlight);
+    color: white;
+  }
+
+  .history {
+    max-height: 150px;
+    overflow-y: auto;
+    background: var(--btn);
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .history h3 {
+    margin-top: 0;
+  }
+
+  .history ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .history li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .delete-item {
+    background: transparent;
+    color: var(--highlight);
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .history-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .history-actions button {
+    padding: 10px;
+    font-size: 14px;
+    background-color: var(--highlight);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .history-actions button:hover {
+    background-color: var(--btn-hover);
+    color: var(--text);
+  }
+  
+
