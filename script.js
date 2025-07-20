@@ -151,4 +151,10 @@ window.onload = () => {
       alert("Nothing to undo.");
     }
   });    
-  
+
+const toggle = document.getElementById('themeSwitch');
+const label = document.getElementById('modeLabel');
+
+toggle.addEventListener('change', () => {
+ label.innerText = toggle.checked ? 'DARK MODE' : 'LIGHT MODE';
+});
